@@ -1,0 +1,182 @@
+#sitepartHeader{
+    background-color: var(--colour-drystone-blue);
+    padding: 0px 10px;
+    box-sizing: border-box;
+    color:white;
+}
+#sitepartHeader a{
+    color:inherit;
+    text-decoration: inherit;
+}
+#sitepartHeader  > div{
+    display: flex;
+    align-items: center;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#sitepartHeader > div > div:nth-child(1) > a > img{
+    height:50px;
+}
+#sitepartHeader > div > div:nth-child(2){
+    width:100%;
+}
+#sitepartHeader > div > div:nth-child(3) > ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    font-size: 18px;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li:hover{
+    background-color: var(--colour-drystone-yellow);
+    color:black;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li:nth-last-child(1){
+    background-color: #e23030;
+    margin-left:10px;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li:nth-last-child(1):hover{
+    background-color: red;
+    color:white;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li > a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    min-width: 100px;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li > a > i{
+    font-size: 30pt;
+    margin-bottom: 10px;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li > a > p{
+    margin:0px;
+}
+
+/* For Submenus */
+#sitepartHeader > div > div:nth-child(3) > ul > li ul{
+    display: none;
+    opacity: 0;
+    background-color: var(--colour-drystone-yellow);
+    color: black;
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    margin-left: 0;
+    min-width:250px;
+    white-space: nowrap;
+    text-align: left;
+    padding: 0;
+    transition: opacity 0.5s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li ul{
+    top: 100%;
+    left: 0%;
+}
+/* For last submenu, align from right to prevent going off the page */
+#sitepartHeader > div > div:nth-child(3) > ul > li:nth-last-child(2) ul{
+    top: 100%;
+    right: 0%;
+    left: unset;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li ul > li{
+    padding: 10px;
+    font-size: 18px;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li ul > li:hover{
+    background-color: #e0b012;
+}
+#sitepartHeader > div > div:nth-child(3) > ul > li:hover ul{
+    display: block;
+    opacity: 1;
+}
+
+/* Mobile Header Styles */
+#navMButtons a{
+    border: var(--colour-drystone-yellow) solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#navMButtons a{
+    margin: 0px 5px;
+}
+#sitepartMHeader{
+    background-color: var(--colour-drystone-blue);
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+    color:white;
+}
+#sitepartMHeader a{
+    color:inherit;
+    text-decoration: inherit;
+}
+#sitepartMHeader  > div{
+    display: flex;
+    align-items: center;
+}
+#sitepartMHeader > div > div:nth-child(1) > a > img{
+    height: 40px;
+    padding: 5px 0px;
+}
+#sitepartMHeader > div > div:nth-child(2){
+    width:100%;
+}
+#sitepartMHeader > div > div:nth-child(3){
+    display:flex;
+    font-size: 24px;
+}
+#sitepartMHeader > div > div:nth-child(3) i {
+    margin: 0px 10px;
+}
+#navMContainer{
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+#navMContainer > ul{
+    padding: 0px;
+    margin: 0px;
+    font-size: 19px;
+}
+#navMContainer > ul > li{
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+#navMContainer > ul > li > a{
+    display: flex;
+    align-items: center;
+}
+#navMContainer > ul > li > a > i{
+    margin-left:5px;
+}
+#navMContainer > ul > li > ul{
+    max-height:0px;
+    overflow: hidden;
+    font-size: 16px;
+}
+#navMContainer > ul > li > ul > li{
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.collapseClose{
+    max-height: 0px;
+    padding-bottom: 0px !important;
+}
+.collapseOpen{
+    max-height: 200vh !important;
+}

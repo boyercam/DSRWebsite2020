@@ -1,0 +1,71 @@
+:root {
+    --colour-drystone-blue: #305fe2;
+    --colour-drystone-yellow: #fdc917;
+    --colour-drystone-pink: #f50057;
+    --colour-drystone-green: #388e3c;
+    --colour-grey: #333;
+    --colour-light-blue: #11b8ff;
+  }
+body{
+    margin:0px;
+    background-color: #cfcfcf;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2,h3{
+  margin: 5px 0px;
+}
+#pageContentContainer{
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.siteBanner{
+  margin: 5px 0px;
+}
+.siteBanner a img{
+  width:100%;
+}
+.siteContainerBlock div:nth-child(1){
+  padding: 3px;
+}
+.siteContainerBlock div:nth-child(2){
+  padding: 0px 3px;
+}
+.social-wall{
+  display: flex;
+}
+.social-width-spacer{
+  width:100%;
+  flex: 1;
+}
+.social-container{
+  height: 500px;
+  width:340px;
+  margin: 5px 0px;
+}
+/* Media queries for showing and hiding desktop/mobile aspects */
+@media screen and (max-width: 890px) {
+  .desktopAspect{
+      display:none;
+  }
+  .social-wall{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #sitepartHeader > div{
+    width:100% !important;
+  }
+  #sitepartFooter > div{
+    width:100% !important;
+  }
+}
+@media screen and (min-width: 891px) {
+  .mobileAspect{
+      display:none;
+  }
+}
