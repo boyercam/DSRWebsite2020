@@ -55,7 +55,7 @@ Cookie.deleteCookies = function(){
     cookies.forEach(function(cookie) {
         //See if the cookie exists or not. We don't want to add cookies to the page
         if(Cookie.getValue(cookie)!=undefined){
-            document.cookie = cookie + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'; //domain=.drystoneradio.com'; <--Be Sure to Uncomment this line!
+            document.cookie = cookie + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/ domain=.drystoneradio.com'; <--Be Sure to Uncomment this line!
         }else{
             console.log("Cookie "+cookie+" undefined")
         }    
@@ -65,7 +65,7 @@ Cookie.deleteCookies = function(){
 
 Cookie.optOut = function(){
     //Opt out for 24hrs
-    document.cookie = 'cookiesConsented=0; max-age=86400; path=/;'; //domain=.drystoneradio.com';
+    document.cookie = 'cookiesConsented=0; max-age=86400; path=/ domain=.drystoneradio.com';
     document.querySelector('#cookie-modal').remove();
     Cookie.deleteCookies();
     Cookie.drawSettingsButton();
@@ -75,7 +75,7 @@ Cookie.optOut = function(){
 Cookie.optIn = function(){
     console.log("Cookies have been opted in")
     //Opt in for 30 days
-    document.cookie = 'cookiesConsented=1; max-age=2592000; path=/;'; //domain=.drystoneradio.com';
+    document.cookie = 'cookiesConsented=1; max-age=2592000; path=/ domain=.drystoneradio.com';
     document.querySelector('#cookie-modal').remove();
     //Reload the page to allow cookies
     location.reload();
